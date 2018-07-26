@@ -5,59 +5,62 @@ import './Components/Style/LoginFrom.css';
 class LoginFrom extends Component {
   render() {
     return (
+        
 
+    
         <Form horizontal className="app-login-form">
-        <Grid>
-        <Row className="show-grid">
-        <Col sm={12} md={12}>
             <FormGroup controlId="formHorizontalEmail">
-                <Col componentClass={ControlLabel} sm={4}>
-                    Email
+            <Row className="show-grid">
+            <Col xs={12} md={4}>
+                <Col componentClass={ControlLabel} sm={2}>
+                    <h5>Email</h5>
                 </Col>
-
-                <Col sm={8}>
+            </Col>
+            <Col xs={12} md={8}>
+                <Col sm={10}>
                     <FormControl type="email" placeholder="Email" />
                 </Col>
-            </FormGroup>
-        </Col>
-        </Row>
-
-        <Row className="show-grid">
-        <Col sm={12} md={12}>
-            <FormGroup controlId="formHorizontalPassword">
-                <Col componentClass={ControlLabel} sm={4}>
-                    Password
+            </Col>
+            </Row>
+        </FormGroup>
+   
+       
+        <FormGroup controlId="formHorizontalPassword">
+            <Row className="show-grid">
+            <Col xs={12} md={4}>
+                <Col componentClass={ControlLabel} sm={2}>
+                    <h5>Password</h5>
                 </Col>
-                <Col sm={8}>
+            </Col>
+            <Col xs={12} md={8}>
+                <Col sm={10}>
                     <FormControl type="password" placeholder="Password" />
                 </Col>
-            </FormGroup>
-        </Col>
-        </Row>
+            </Col>
+            </Row>
+        </FormGroup>
 
-        <Row className="show-grid">
-        <Col sm={12} md={12}>
-            <FormGroup>
-            <Col componentClass={ControlLabel} sm={4}> </Col>
-                <Col sm={8}>
-                    <Checkbox>Remember me</Checkbox>
+        <FormGroup>
+            <Row className="show-grid">
+            <Col xs={12} md={4}></Col>
+            <Col xs={12} md={8}>
+                <Col  sm={10}>
+                    <Checkbox><p>Remember me</p></Checkbox>
                 </Col>
-            </FormGroup>
-        </Col>
-        </Row>
-        
-        <Row className="show-grid">
-        <Col sm={12} md={12}>
-            <FormGroup>
-            <Col componentClass={ControlLabel} sm={4}> </Col>
-                <Col smOffset={10}  sm={8}>
-                    <Button type="submit">Sign in</Button>
                 </Col>
-            </FormGroup>
-        </Col>
-        </Row>
-    
-        </Grid>
+            </Row>
+        </FormGroup>
+
+        <FormGroup>
+            <Row className="show-grid">
+                <Col xs={5} sm={5} md={5}></Col>
+                <Col xs={7} sm={7} md={7}>
+                <Col smOffset={7} >
+                    <Button type="submit" className="app-login-btn">Sign in</Button>
+                </Col>
+                </Col>
+            </Row>
+        </FormGroup>
         </Form>
     );
   }
