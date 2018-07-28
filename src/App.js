@@ -34,6 +34,7 @@ class App extends Component {
     return (
       <div>
       <Clock name="Javascipt"></Clock>
+      <Clock name="React"></Clock>
       </div>
     );
   }
