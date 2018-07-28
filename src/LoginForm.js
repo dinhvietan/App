@@ -6,7 +6,6 @@ class LoginFrom extends Component {
   render() {
     return (
         
-
     
         <Form horizontal className="app-login-form">
             <FormGroup controlId="formHorizontalEmail">
