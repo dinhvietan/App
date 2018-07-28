@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import Clock from './Components/Clock.js';
+import LoginForm from './Components/Script/LoginForm.js';
 
 
 
@@ -9,8 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Clock name="Javascipt"></Clock>
-      <Clock name="React"></Clock>
+      <LoginForm></LoginForm>
       </div>
     );
   }

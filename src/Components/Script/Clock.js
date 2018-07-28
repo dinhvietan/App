@@ -11,7 +11,7 @@ class Clock extends Component{
     }
     componentDidUpdate(props, state){
         console.log(props, state)
-        if(state.date != this.state.date) {
+        if(state.date !== this.state.date) {
             alert('Current date: '+ this.state.date.toLocaleTimeString());
         }
     }
