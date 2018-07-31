@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import LoginForm from './Components/Script/LoginForm.js';
+import Header from './Components/Script/Header.js';
 
 
 
@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <LoginForm></LoginForm>
+        <Header></Header>
       </div>
     );
   }
