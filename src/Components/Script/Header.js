@@ -5,10 +5,10 @@ import '../Style/header.css'
 class Header extends Component {
     render() {
         return (
-            <Navbar inverse collapseOnSelect>
+            <Navbar collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#brand">React-Bootstrap</a>
+                        <a href="#brand">An</a>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
