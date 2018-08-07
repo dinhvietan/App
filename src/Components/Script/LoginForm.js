@@ -5,7 +5,7 @@ import '../Style/loginform.css';
 class LoginFrom extends Component {
     constructor(props){
         super(props);
-        this.state = {data: {loginform: "", password: ""}}
+        this.state = {data: {loginname: "", password: ""}}
     }
 
     onHandleLoginName(event){
@@ -18,23 +18,18 @@ class LoginFrom extends Component {
         newState.data.password = event.target.value;
         this.setState(newState);
     }
-
-    /*onHandle(event){
-        let newState = {
-            data: this.state.data
-        };
-        let inputName = event.target.value;
-        
-        console.log(newState)
-
-        this.setState(newState);
-    }*/
-
+    
+    onSubmit(event){
+        if (this.state.data.loginname == "dinhvietan@gmail.com" && this.state.data.password == "abc"){
+            window.location.href = "/"
+            console.log(this.onHandleLoginName)
+        }
+    }
   render() {
     return (
         
         <Form horizontal className="app-login-form">
-            <FormGroup >
+            <FormGroup controlId="formHorizontalEmail" >
             <Row className="show-grid">
             <Col xs={12} md={4}>
                 <Col componentClass={ControlLabel} sm={2}>
@@ -43,14 +38,14 @@ class LoginFrom extends Component {
             </Col>
             <Col xs={12} md={8}>
                 <Col sm={10}>
-                    <FormControl name="loginname" type="email" placeholder="Email" onChange={this.onHandleLoginName.bind(this)} value={this.state.data.loginname}/>
+                    <FormControl name="loginname" type="email" placeholder="Email" onChange={this.onHandleLoginName.bind(this)}/>
                 </Col>
             </Col>
             </Row>
         </FormGroup>
    
        
-        <FormGroup>
+        <FormGroup controlId="formHorizontalPassword">
             <Row className="show-grid">
             <Col xs={12} md={4}>
                 <Col componentClass={ControlLabel} sm={2}>
@@ -59,7 +54,7 @@ class LoginFrom extends Component {
             </Col>
             <Col xs={12} md={8}>
                 <Col sm={10}>
-                    <FormControl name="password" type="password" placeholder="Password"  onChange={this.onHandlePassword.bind(this)}  value={this.state.data.password}/>
+                    <FormControl name="password" type="password" placeholder="Password"  onChange={this.onHandlePassword.bind(this)} />
                 </Col>
             </Col>
             </Row>
@@ -81,7 +76,7 @@ class LoginFrom extends Component {
                 <Col xs={12} sm={12} md={8}></Col>
                 <Col xs={12} sm={12} md={4}>
                 <Col smOffset={0} >
-                    <Button type="submit" className="app-login-btn">Sign in</Button>
+                    <Button type="submit" className="app-login-btn" onClick={this.onSubmit.bind(this)} >Sign in</Button>
                 </Col>
                 </Col>
             </Row>

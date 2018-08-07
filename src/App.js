@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import Header from './Components/Script/Header.js';
-import LoginFrom from './Components/Script/LoginForm.js'
-
-
+import AppRouter from './Components/Script/AppRouter'
 
 class App extends Component {
+  
+  constructor(props){
+    super(props);  
+  }
+
   render() {
     return (
       <div>
-        <Header></Header>
-        <LoginFrom></LoginFrom>
+        <AppRouter/>
       </div>
     );
   }
