@@ -10,15 +10,9 @@ class App extends Component {
   }
 
   render() {
-    let headerEle = [];
-    if(this.props.isLogged === true){
-      headerEle.push(
-        <Header logged={true} onClick={(e)=>{}} />
-      )
-    }
     return (
       <div>
-        <AppRouter isLogged={this.state.logged}/>
+        <AppRouter />
       </div>
     );
   }
