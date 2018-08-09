@@ -15,3 +15,4 @@ class Account extends React.Component{
         );
       }
 }
+export default Account;

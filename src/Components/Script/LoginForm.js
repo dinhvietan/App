@@ -20,7 +20,7 @@ class LoginFrom extends Component {
     }
     
     onSubmit(event){
-        if (this.state.data.loginname == "dinhvietan@gmail.com" && this.state.data.password == "abc"){
+        if (this.state.data.loginname === "dinhvietan@gmail.com" && this.state.data.password === "abc"){
             window.location.href = "/"
             console.log(this.onHandleLoginName)
         }
