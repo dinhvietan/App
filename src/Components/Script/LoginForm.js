@@ -6,6 +6,7 @@ class LoginFrom extends Component {
     constructor(props){
         super(props);
         this.state = {data: {loginname: "", password: ""}}
+        this.onKeyDownHandle = this.onKeyDownHandle.bind(this);
     }
 
     onHandleLoginName(event){
@@ -21,10 +22,21 @@ class LoginFrom extends Component {
     
     onSubmit(event){
         if (this.state.data.loginname === "dinhvietan@gmail.com" && this.state.data.password === "abc"){
-            window.location.href = "/"
-            console.log(this.onHandleLoginName)
+           let userInfo = {
+               email: "dinhvietan@gmail.com",
+               name: "Duy Huynh"
+           }
+        }
+        window.localStorage.setItem("session", JSON.stringify(userInfo));
+        window.location.href = "/";
+    }
+    onKeyDownHandle(event){
+        if(event.keyCode === 13){
+            
         }
     }
+
+
   render() {
     return (
         
